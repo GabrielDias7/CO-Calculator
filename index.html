@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Emissão de Carbono</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card" id="calculator">
+            <div class="card-body">
+                <h5 class="card-title text-center mb-4">Calculadora de Emissão</h5>
+                
+                <div class="theme-toggle-container mb-3 d-flex justify-content-end align-items-center">
+                    <i class="bi bi-sun-fill theme-icon" id="themeIconToggle"></i>
+                </div>
+
+                <div class="mb-3">
+                    <label for="distance" class="form-label">Distância</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="distance" placeholder="Insira a distância">
+                        <select class="form-select" id="unit">
+                            <option value="km" selected>km</option>
+                            <option value="m">m</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="button" class="btn btn-info w-100 mb-3" id="openMapsBtn">
+                    Abrir Google Maps para calcular distância
+                </button>
+
+                <div class="mb-3">
+                    <label for="modal" class="form-label">Meio de Transporte</label>
+                    <select class="form-select" id="modal">
+                        <option selected>Selecione o modal</option>
+                        <option value="carro">Carro / Van</option>
+                        <option value="moto">Moto</option>
+                        <option value="onibus">Ônibus / BRT</option>
+                        <option value="trem">Trem / Metrô / VLT</option>
+                        <option value="barca">Barca</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary w-100" id="calculateBtn">Calcular Emissão</button>
+                <div id="result" class="mt-3">
+                    <!-- O resultado aparecerá aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
